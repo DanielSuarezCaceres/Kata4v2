@@ -16,6 +16,7 @@ public class Kata4 {
          for (String name : names) {
              System.out.println(name);
          }
+         
         
     }
 }
