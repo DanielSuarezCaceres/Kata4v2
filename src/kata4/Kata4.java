@@ -9,19 +9,14 @@ import java.util.ArrayList;
 
 public class Kata4 {
     
-     public static void main(String[] args) {
+     public static void main(String[] args) throws FileNotFoundException, IOException {
         
-        File file = new File("c:\\");
-        print(file.listFiles(),"");
+         File file = new File("c:\\");
+         String[] names = file.list();
+         for (String name : names) {
+             System.out.println(name);
+         }
         
-    }
-    private static void print(File[] files, String indent){
-        if (files==null) return;
-        for (File file : files) {
-            System.out.println(indent + (file.isDirectory() ? "+" : "-") + file.getName());
-            if(!file.isDirectory() || file.isHidden()) continue;
-            print(file.listFiles(), " ");
-        }
     }
 }
     
